@@ -207,7 +207,7 @@ class WeatherApp(QWidget):
             self.dark_mode_button.setText("Toggle Dark Mode")
             self.is_dark_mode = False
 
-    def plot_weather_chart(self, city, api_key):
+    def plot_weather_chart(self, city, api_key): # Function To add a graph for every 3 hour weather
         """Fetch hourly weather data and plot a temperature chart."""
         url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}"
         response = requests.get(url)
